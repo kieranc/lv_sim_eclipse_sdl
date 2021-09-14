@@ -16,7 +16,7 @@
 #include "lvgl/lvgl.h"
 #include "lv_drivers/display/monitor.h"
 #include "lv_drivers/indev/mouse.h"
-#include "lv_examples/lv_examples.h"
+//#include "lv_examples/lv_examples.h"
 
 /*********************
  *      DEFINES
@@ -64,7 +64,7 @@ int main(int argc, char **argv)
   /*Initialize the HAL (display, input devices, tick) for LittlevGL*/
   hal_init();
 
-  lv_demo_widgets();
+  //lv_demo_widgets();
 
   while (1) {
     /* Periodically call the lv_task handler.
