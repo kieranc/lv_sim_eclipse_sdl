@@ -66,6 +66,26 @@ int main(int argc, char **argv)
 
   //lv_demo_widgets();
 
+  lv_color_t needle_colors[1];
+  lv_obj_t * gauge1;
+
+  uint32_t value=30;
+
+  /*Describe the color for the needles*/
+
+  needle_colors[0] = LV_COLOR_ORANGE;
+
+  /*Create a gauge*/
+  gauge1 = lv_gauge_create(lv_scr_act(), NULL);
+  lv_gauge_set_needle_count(gauge1, 1, needle_colors);
+  lv_obj_set_size(gauge1, 180, 180);
+  lv_obj_align(gauge1, NULL, LV_ALIGN_CENTER, 0, 0);
+  lv_gauge_set_scale(gauge1, 360, 60, 0);
+  lv_gauge_set_range(gauge1, 0, 59);
+
+  /*Set the values*/
+  lv_gauge_set_value(gauge1, 0, value);
+
   while (1) {
     /* Periodically call the lv_task handler.
      * It could be done in a timer interrupt or an OS task too.*/
