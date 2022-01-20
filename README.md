@@ -3,6 +3,7 @@ This fork of the LVGL simulator is intended to be used to prototype lvgl code fo
 To use:
 * git clone https://github.com/kieranc/pinetime-lvgl-simulator.git
 * cd pinetime-lvgl-simulator
+* git submodule update --init
 * mkdir build
 * cd build
 * cmake ..
